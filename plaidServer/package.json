@@ -1,0 +1,17 @@
+{
+  "name": "plaidserver",
+  "version": "1.0.0",
+  "description": "Code that runs the server for the plaid backend for the broke app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "envvar": "^2.0.0",
+    "express": "^4.16.4",
+    "moment": "^2.22.2",
+    "plaid": "^2.10.0"
+  }
+}
