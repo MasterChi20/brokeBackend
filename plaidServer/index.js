@@ -27,12 +27,12 @@ const plaidClient = new plaid.Client(
 
 app.get('/', (req, res) => {
     console.log("I was hit!");
-    return null;
+    res.send(null);
 });
 
 app.get('/transactions' , (req, res) => {
 
-	publicToken = "public-sandbox-b40c6a95-fdb2-4de7-8950-9868e8621c6f"
+	publicToken = req.body.public_key;
 
     async function Wrapper() {
     	await plaidClient.exchangePublicToken(
