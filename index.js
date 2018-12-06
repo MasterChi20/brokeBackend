@@ -4,6 +4,10 @@ const port = 8000;
 const envvar = require('envvar');
 const moment = require('moment');
 const plaid = require('plaid');
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 const PLAID_CLIENT_ID = '5bb63c2cf17fb3001118dd22';
 const PLAID_SECRET = '25988c12c60164e32d73351e562718';
@@ -30,7 +34,7 @@ app.get('/', (req, res) => {
     res.send(null);
 });
 
-app.get('/transactions' , (req, res) => {
+app.post('/transactions' , (req, res) => {
 
 	publicToken = req.body.public_key;
 
