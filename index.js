@@ -29,15 +29,14 @@ const plaidClient = new plaid.Client(
 
 
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
     console.log("I was hit!");
     res.send(null);
 });
 
 app.post('/transactions' , (req, res) => {
-
+    console.log("I entered transactions");
 	publicToken = req.body.public_key;
-
     async function Wrapper() {
     	await plaidClient.exchangePublicToken(
             publicToken,
