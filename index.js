@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 
 app.post('/transactions' , (req, res) => {
     console.log("I entered transactions");
-    var b = JSON.parse(req);
+    var b = req;
 	publicToken = b.body.public_key;
     async function Wrapper() {
     	await plaidClient.exchangePublicToken(
@@ -70,6 +70,7 @@ app.post('/transactions' , (req, res) => {
                             }
                         }
                         res.send(transactionRes);
+                        console.log("Sent the transactions.");
                     }
                 );
             }
@@ -78,4 +79,4 @@ app.post('/transactions' , (req, res) => {
     Wrapper();
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Broke is listening on port ${port}!`));
