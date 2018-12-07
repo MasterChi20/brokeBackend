@@ -9,10 +9,10 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const PLAID_CLIENT_ID = '5bb63c2cf17fb3001118dd22';
-const PLAID_SECRET = '25988c12c60164e32d73351e562718';
-const PLAID_PUBLIC_KEY = 'ac25fbf77a17846194a680a183096a';
-const PLAID_ENV = envvar.string('PLAID_ENV', 'sandbox');
+const PLAID_CLIENT_ID = '5bbf84f634d5c50012866d5d';
+const PLAID_SECRET = 'a663470737c311eec629a5c0d89382';
+const PLAID_PUBLIC_KEY = '65fec6f4ef6d14b46623f6daf1ce3a';
+const PLAID_ENV = envvar.string('PLAID_ENV', 'development');
 // We store the access_token in memory - in production, store it in a secure
 // persistent data store
 
